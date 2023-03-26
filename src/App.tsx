@@ -1,11 +1,15 @@
+import { Provider } from 'react-redux';
 import './App.css';
-import { DataFetchingComponent } from './components/DataFetchingComponent';
+import { ReduxDataFetchingComponent } from './components/ReduxDataFetchingComponent';
+import { store } from './redux/store';
 
 function App() {
   return (
-    <div className="App">
-      <DataFetchingComponent />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <ReduxDataFetchingComponent />
+      </div>
+    </Provider>
   );
 }
 
